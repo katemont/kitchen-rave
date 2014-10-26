@@ -3,18 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>KITCHEN RAVE!</title> 
+  <!-- jQuery in but not yet being used -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-  <style>
-  #kitchen {
-    width: 90%;
-    height: 700px;
-    margin: auto
-  }
-  h1 {
-   font-size: 100px;
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="stylesheets/animate.css"> 
 </head>
 
 <body onload="return ran_col()">
@@ -23,9 +14,11 @@
     <p class="animated infinite bounce">Kitchen rave!!</p>
     <p class="animated infinite shake">Kitchen rave!!</p>
     <p class="animated infinite flash">Kitchen rave!!</p>
-  <button onclick="ran_col()">CLICK TO RAVE!</button>
+    <img src="http://images.clipartpanda.com/average-clipart-average-kitchen.svg" alt="Lamp" width="300" height="200">
+    <button onclick="ran_col()">CLICK TO RAVE!</button>
   </div>
-  
+
+<!-- changes kitchen div colour -->
   <script type="text/javascript">
   function ran_col() { 
     var color = '#';
