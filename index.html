@@ -3,29 +3,20 @@
 <head>
   <meta charset="utf-8">
   <title>KITCHEN RAVE!</title> 
-  <!-- jQuery in but not yet being used -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>  
   <link rel="stylesheet" type="text/css" href="stylesheets/animate.css"> 
+  <link rel="stylesheet" type="text/css" href="stylesheets/styles.css"> 
 </head>
 
-<body onload="return ran_col()">
-  <div id="kitchen">
+<body class ='darkness'>
+  <button class="begin_rave">CLICK TO RAVE!</button>
+  <div id="kitchen" class="hidden">
     <h1 class="animated infinite wobble">KITCHEN RAVE!!</h1>
     <p class="animated infinite bounce">Kitchen rave!!</p>
     <p class="animated infinite shake">Kitchen rave!!</p>
     <p class="animated infinite flash">Kitchen rave!!</p>
-    <img src="http://images.clipartpanda.com/average-clipart-average-kitchen.svg" alt="Lamp" width="300" height="200">
-    <button onclick="ran_col()">CLICK TO RAVE!</button>
+    <img src="http://images.clipartpanda.com/average-clipart-average-kitchen.svg" alt="Lamp" width="300" height="200">  
   </div>
-
-<!-- changes kitchen div colour -->
-  <script type="text/javascript">
-  function ran_col() { 
-    var color = '#';
-    var letters = ['FF7F50','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0','8B008B','FF1493','FF00FF','FF69B4','FFB6C1']; 
-    color += letters[Math.floor(Math.random() * letters.length)];
-    document.getElementById('kitchen').style.background = color;
-  }
-  </script>
 </body>
 </html>
