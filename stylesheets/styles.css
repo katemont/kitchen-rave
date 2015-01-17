@@ -45,7 +45,7 @@ h1 {
 
 .playful_habib {
   opacity: 1;
-  -webkit-animation: activate_playful_habib 1.2s linear infinite;
+  -webkit-animation: activate_playful_habib 1s linear infinite;
 }
 
 @-webkit-keyframes activate_playful_habib {

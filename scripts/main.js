@@ -26,7 +26,7 @@ $(document).ready( function() {
          var letters = ['FF7F50','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0','8B008B','FF1493','FF00FF','FF69B4','FFB6C1']; 
          color += letters[Math.floor(Math.random() * letters.length)];
          document.getElementById('kitchen').style.background = color;
-    }, 1000);
+    }, 50);
   }
 
   function endRaveMessage(){
@@ -49,6 +49,7 @@ $(document).ready( function() {
       $('.beautiful_habib').removeClass('playful_habib');
       $('.habib_container').removeClass('lil_habib_shuffle_left');
       $('.habib_container').removeClass('lil_habib_shuffle_right');
+      console.log('Habib is beautiful and elusive');
     }, 18000);
   });  
 
