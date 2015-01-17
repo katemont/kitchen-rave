@@ -31,7 +31,7 @@ $(document).ready( function() {
 
   function endRaveMessage(){
     var message;
-    var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over yet'];
+    var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'];
     message = messages[Math.floor(Math.random() * messages.length)];
     alert(message);
   }
