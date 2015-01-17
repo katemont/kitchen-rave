@@ -6,7 +6,6 @@
   display: none;
 }
 
-
 #kitchen {
   width: 90%;
   height: 500px;
@@ -16,3 +15,38 @@
 h1 {
  font-size: 100px;
 }
+
+.habib_container {
+  float: right;
+}
+
+.beautiful_habib {
+  border-radius: 50%;
+  border: 5px solid pink;
+  height: 200px;
+  width: 200px;
+  background: url('../images/beautiful_habib.JPG');
+  background-size: 100%;
+  opacity: 0;
+}
+
+.playful_habib {
+  opacity: 1;
+  -webkit-animation: activate_playful_habib 1.2s linear infinite;
+}
+
+@-webkit-keyframes activate_playful_habib {
+  0% {
+    transform: scale(.01) rotate(0deg);
+  }
+  50% {
+    transform: scale(1) rotate(360deg);
+  }
+  100% {
+    transform: scale(.01) rotate(720deg);
+  }
+}
+
+
+
+
