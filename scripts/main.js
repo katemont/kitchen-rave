@@ -1,5 +1,5 @@
 $(document).ready( function() {
-  console.log('Habib is beautiful');
+  console.log('Habib is beautiful and elusive');
 
   $('.begin_rave').click(function() {
     beginRave();
@@ -39,7 +39,18 @@ $(document).ready( function() {
   $('.beautiful_habib').click(function() {
     $(this).addClass('playful_habib');
     console.log('Habib is beautiful and playful');
-  });
+    setTimeout(function() {
+      $('.habib_container').addClass('lil_habib_shuffle_left');
+    }, 6000);
+    setTimeout(function() {
+      $('.habib_container').addClass('lil_habib_shuffle_right');
+    }, 14000);
+    setTimeout(function() {
+      $('.beautiful_habib').removeClass('playful_habib');
+      $('.habib_container').removeClass('lil_habib_shuffle_left');
+      $('.habib_container').removeClass('lil_habib_shuffle_right');
+    }, 18000);
+  });  
 
 });
 

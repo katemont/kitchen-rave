@@ -18,6 +18,19 @@ h1 {
 
 .habib_container {
   float: right;
+  /*position: absolute;
+  top: 337px;
+  right: 90px;*/
+}
+
+.lil_habib_shuffle_left {
+  -webkit-transition: all 2s linear;
+  -webkit-transform: translateX(-930px);
+}
+
+.lil_habib_shuffle_right {
+  -webkit-transition: all 2s linear;
+  -webkit-transform: translateX(-1px);
 }
 
 .beautiful_habib {
