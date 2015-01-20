@@ -3,9 +3,8 @@ $(document).ready(function () {
 
   function gettingFluorescent() {
     setInterval(function () {
-      // TODO: find out what jslint is banging on about when it says to combine the 'var' statements
-      var color = '#';
-      var letters = ['FF7F50', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0', '8B008B', 'FF1493', 'FF00FF', 'FF69B4', 'FFB6C1'];
+      var color = '#',
+        letters = ['FF7F50', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0', '8B008B', 'FF1493', 'FF00FF', 'FF69B4', 'FFB6C1'];
       color += letters[Math.floor(Math.random() * letters.length)];
       document.getElementById('kitchen').style.background = color;
     }, 50);
@@ -20,8 +19,9 @@ $(document).ready(function () {
   }
 
   function endRaveMessage() {
-    var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'];
-    var message = messages[Math.floor(Math.random() * messages.length)];
+    var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'],
+      message;
+    message = messages[Math.floor(Math.random() * messages.length)];
     alert(message);
   }
 
