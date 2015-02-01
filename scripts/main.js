@@ -1,59 +1,67 @@
-$(document).ready(function () {
-  console.log('Habib is beautiful and elusive');
+(function () { 
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log('Habib is beautiful and elusive');
 
-  function gettingFluorescent() {
-    setInterval(function () {
-      var color = '#',
-        letters = ['FF7F50', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0', '8B008B', 'FF1493', 'FF00FF', 'FF69B4', 'FFB6C1'];
-      color += letters[Math.floor(Math.random() * letters.length)];
-      document.getElementById('kitchen').style.background = color;
-    }, 50);
-  }
+    var body = document.getElementsByTagName('body')[0],
+      kitchen = document.getElementById('kitchen'),
+      beginRaveEl = document.getElementsByClassName('begin_rave')[0],
+      endRave = document.getElementsByClassName('end_rave')[0],
+      habibContainer = document.getElementsByClassName('habib_container')[0],
+      beautifulHabib = document.getElementsByClassName('beautiful_habib')[0];
 
-  function beginRave() {
-    $('body').removeClass('darkness');
-    $('#kitchen').removeClass("hidden");
-    $('.begin_rave').addClass('hidden');
-    $('.end_rave').removeClass('hidden');
-    gettingFluorescent();
-  }
+    function gettingFluorescent() {
+      setInterval(function () {
+        var color = '#',
+          colors = ['FF7F50', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0', '8B008B', 'FF1493', 'FF00FF', 'FF69B4', 'FFB6C1'];
+        color += colors[Math.floor(Math.random() * colors.length)];
+        kitchen.style.background = color;
+      }, 500);
+    }
 
-  function endRaveMessage() {
-    var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'],
-      message;
-    message = messages[Math.floor(Math.random() * messages.length)];
-    alert(message);
-  }
+    function beginRave() {
+      body.classList.remove('darkness');
+      kitchen.classList.remove("hidden");
+      beginRaveEl.classList.add('hidden');
+      endRave.classList.remove('hidden');
+      gettingFluorescent();
+    }
 
-  function playfulHabib() {
-    console.log('Habib is beautiful and playful');
-    setTimeout(function () {
-      $('.habib_container').addClass('lil_habib_shuffle_left');
-    }, 6000);
-    setTimeout(function () {
-      $('.habib_container').addClass('lil_habib_shuffle_right');
-    }, 14000);
-    setTimeout(function () {
-      $('.beautiful_habib').removeClass('playful_habib');
-      $('.habib_container').removeClass('lil_habib_shuffle_left');
-      $('.habib_container').removeClass('lil_habib_shuffle_right');
-      console.log('Habib is beautiful and elusive');
-    }, 18000);
-  }
+    function endRaveMessage() {
+      var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'],
+        message ='';
+      message = messages[Math.floor(Math.random() * messages.length)];
+      alert(message);
+    }
 
-  $('.begin_rave').click(function () {
-    beginRave();
+    function playfulHabib() {
+      console.log('Habib is beautiful and playful');
+      setTimeout(function () {
+        habibContainer.classList.add('lil_habib_shuffle_left');
+      }, 6000);
+      setTimeout(function () {
+        habibContainer.classList.add('lil_habib_shuffle_right');
+      }, 14000);
+      setTimeout(function () {
+        beautifulHabib.classList.remove('playful_habib');
+        habibContainer.classList.remove('lil_habib_shuffle_left');
+        habibContainer.classList.remove('lil_habib_shuffle_right');
+        console.log('Habib is beautiful and elusive');
+      }, 18000);
+    }
+
+    beginRaveEl.onclick = beginRave;
+
+    endRave.onclick = function () {
+      kitchen.classList.add("hidden");
+      body.classList.add('darkness');
+      endRaveMessage();
+      beginRave();
+    };
+
+    beautifulHabib.onclick = function () {
+      this.classList.add('playful_habib');
+      playfulHabib();
+    };
+
   });
-
-  $('.end_rave').click(function () {
-    $('#kitchen').addClass("hidden");
-    $('body').addClass('darkness');
-    endRaveMessage();
-    beginRave();
-  });
-
-  $('.beautiful_habib').click(function () {
-    $(this).addClass('playful_habib');
-    playfulHabib();
-  });
-});
+}(document));
