@@ -15,7 +15,7 @@
           colors = ['FF7F50', 'FF0000', '00FF00', '0000FF', 'FFFF00', '00FFFF', 'FF00FF', 'C0C0C0', '8B008B', 'FF1493', 'FF00FF', 'FF69B4', 'FFB6C1'];
         color += colors[Math.floor(Math.random() * colors.length)];
         kitchen.style.background = color;
-      }, 500);
+      }, 50);
     }
 
     function beginRave() {
