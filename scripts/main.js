@@ -3,7 +3,7 @@
     console.log('Habib is beautiful and elusive');
 
     var body = document.getElementsByTagName('body')[0],
-      kitchen = document.getElementById('kitchen'),
+      kitchen = document.getElementsByClassName('kitchen')[0],
       beginRaveEl = document.getElementsByClassName('begin_rave')[0],
       endRave = document.getElementsByClassName('end_rave')[0],
       habibContainer = document.getElementsByClassName('habib_container')[0],
