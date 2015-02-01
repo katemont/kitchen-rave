@@ -1,5 +1,5 @@
-(function () { 
-  document.addEventListener("DOMContentLoaded", function() {
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
     console.log('Habib is beautiful and elusive');
 
     var body = document.getElementsByTagName('body')[0],
@@ -28,7 +28,7 @@
 
     function endRaveMessage() {
       var messages = ['No', 'The party\'s only just started', 'sausage', 'potato', 'The rave isn\'t over', 'Have you danced with Habib yet?'],
-        message ='';
+        message = '';
       message = messages[Math.floor(Math.random() * messages.length)];
       alert(message);
     }
